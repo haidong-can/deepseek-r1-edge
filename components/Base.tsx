@@ -62,7 +62,7 @@ export const Base = () => {
   const KEYWORD_BUTTONS: KeywordButton[] = [
     {
       text: t(
-        '为带有主动降噪和40小时续航的无线耳机写产品标题'
+        'How to write Amazon product titles for wireless earphones with ANC and 40h battery life?'
       ),
       query: t(
         'How to write Amazon product titles for wireless earphones with ANC and 40h battery life?'
