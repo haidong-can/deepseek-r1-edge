@@ -22,7 +22,7 @@ interface KeywordButton {
 
 export const Base = () => {
   const [userInput, setUserInput] = useState('Hi');
-  const [useNetwork, setUseNetwork] = useState(false);
+  const [useNetwork, setUseNetwork] = useState(true);
   const [showKeywords, setShowKeywords] = useState(true);
   const [isMobile, setIsMobile] = useState(false);
   const [isClient, setIsClient] = useState(false);
