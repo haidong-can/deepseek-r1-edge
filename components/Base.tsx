@@ -28,7 +28,7 @@ export const Base = () => {
   const [isClient, setIsClient] = useState(false);
   const [answered, setAnswered] = useState(false);
   const messageRef = useRef<HTMLDivElement>(null);
-  const [isSiteEnv, setIsSiteEnv] = useState(true);
+  const [isSiteEnv, setIsSiteEnv] = useState(false);
 
   useEffect(() => {
     setIsSiteEnv(window.location.href.includes('.site'));
@@ -56,13 +56,13 @@ export const Base = () => {
       'Network: Off': '联网: 关闭',
       References: '参考',
     };
-    return isSiteEnv ? map[en] || en : zh;
+    return isSiteEnv ? map[en] || en : en;
   };
 
   const KEYWORD_BUTTONS: KeywordButton[] = [
     {
       text: t(
-        'How to write Amazon product titles for wireless earphones with ANC and 40h battery life?'
+        '为带有主动降噪和40小时续航的无线耳机写产品标题'
       ),
       query: t(
         'How to write Amazon product titles for wireless earphones with ANC and 40h battery life?'
