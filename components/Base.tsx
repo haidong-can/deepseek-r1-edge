@@ -28,7 +28,7 @@ export const Base = () => {
   const [isClient, setIsClient] = useState(false);
   const [answered, setAnswered] = useState(false);
   const messageRef = useRef<HTMLDivElement>(null);
-  const [isSiteEnv, setIsSiteEnv] = useState(false);
+  const [isSiteEnv, setIsSiteEnv] = useState(true);
 
   useEffect(() => {
     setIsSiteEnv(window.location.href.includes('.site'));
@@ -56,7 +56,7 @@ export const Base = () => {
       'Network: Off': '联网: 关闭',
       References: '参考',
     };
-    return isSiteEnv ? map[en] || en : en;
+    return isSiteEnv ? map[en] || en : zh;
   };
 
   const KEYWORD_BUTTONS: KeywordButton[] = [
